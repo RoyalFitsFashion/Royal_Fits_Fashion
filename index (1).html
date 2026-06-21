@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Fits | Luxury African Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo">Royal Fits</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#shop">Shop</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Luxury Tailoring Redefined</h1>
+        <p>Premium custom-made African and contemporary designs crafted with precision in Akatsi.</p>
+        <br>
+        <a href="#booking" class="btn">Book Appointment</a>
+    </div>
+</section>
+
+<section id="about" class="fade-in">
+    <h2>About Royal Fits</h2>
+    <p>
+        At Royal Fits, we transform fabrics into confidence. Based in Akatsi, we specialize in custom-made African wear, traditional outfits, and contemporary designs tailored to perfection.
+        Our mission is to deliver premium quality, sharp finishing, and a flawless fit every time — making clients look confident and stylish for every occasion while delivering on time.
+    </p>
+</section>
+
+<section id="services" class="fade-in">
+    <h2>Our Services</h2>
+    <div class="grid">
+        <div class="card">Custom Sewing</div>
+        <div class="card">Alterations</div>
+        <div class="card">Wedding & Traditional Wear</div>
+        <div class="card">Uniforms</div>
+        <div class="card">Ready-to-Wear</div>
+    </div>
+</section>
+
+<section id="gallery" class="fade-in">
+    <h2>Our Work</h2>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="https://via.placeholder.com/1000x600" class="slide active" alt="Royal Fits design 1">
+            <img src="https://via.placeholder.com/1000x600" class="slide" alt="Royal Fits design 2">
+            <img src="https://via.placeholder.com/1000x600" class="slide" alt="Royal Fits design 3">
+            <img src="https://via.placeholder.com/1000x600" class="slide" alt="Royal Fits design 4">
+        </div>
+
+        <button class="prev" aria-label="Previous slide">&#10094;</button>
+        <button class="next" aria-label="Next slide">&#10095;</button>
+    </div>
+
+</section>
+
+<section id="booking" class="fade-in">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="date" id="date" required>
+        <textarea id="details" placeholder="Describe your design" required></textarea>
+        <button type="submit" class="btn">Send Booking via WhatsApp</button>
+    </form>
+</section>
+
+<section id="shop" class="fade-in">
+    <h2>Shop Ready-To-Wear</h2>
+    <div class="grid">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x350" alt="Royal Kente Dress">
+            <h3>Royal Kente Dress</h3>
+            <p>GHS 450</p>
+            <button onclick="addToCart('Royal Kente Dress',450)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x350" alt="African Print Suit">
+            <h3>African Print Suit</h3>
+            <p>GHS 600</p>
+            <button onclick="addToCart('African Print Suit',600)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="cart-section" class="fade-in">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="cart-total"></h3>
+    <button onclick="checkout()">Proceed to Payment</button>
+</section>
+
+<section id="reviews" class="fade-in">
+    <h2>Leave a Review</h2>
+    <input type="text" id="review-name" placeholder="Your Name">
+    <br><br>
+    <textarea id="review-text" placeholder="Your Review"></textarea>
+    <button onclick="submitReview()">Submit Review</button>
+
+    <div id="review-list"></div>
+</section>
+
+<section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 0555427237</p>
+    <p><strong>Email:</strong> dorisquist20@gmail.com</p>
+    <p><strong>Location:</strong> Akatsi, Ghana</p>
+</section>
+
+<footer>
+    © 2026 Royal Fits | Designed for Excellence
+    <br>
+    <h6>Designed by Agorklah Bright</h6>
+</footer>
+
+<a href="https://wa.me/233555427237" class="whatsapp" target="_blank">
+    Chat on WhatsApp
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

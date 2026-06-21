@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Fits Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+    <h2>Admin Dashboard</h2>
+    <p>Manage site-generated content stored in this browser.</p>
+
+    <button class="btn" onclick="clearReviews()">Clear All Reviews</button>
+    <button class="btn" onclick="clearCart()">Clear All Cart Data</button>
+
+    <div id="admin-review-list" style="margin-top:30px;"></div>
+</section>
+
+<script src="script.js"></script>
+<script>
+function renderAdminReviews(){
+    const list = document.getElementById('admin-review-list');
+    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+    if(reviews.length === 0){
+        list.innerHTML = '<p>No reviews yet.</p>';
+        return;
+    }
+    list.innerHTML = '<h3>Current Reviews</h3>' + reviews.map(r =>
+        `<div class="card"><strong>${r.name}</strong><p>${r.text}</p></div>`
+    ).join('');
+}
+
+function clearReviews(){
+    localStorage.removeItem("reviews");
+    alert("All reviews deleted.");
+    renderAdminReviews();
+}
+
+function clearCart(){
+    localStorage.removeItem("cart");
+    alert("Cart data cleared.");
+}
+
+renderAdminReviews();
+</script>
+
+</body>
+</html>
